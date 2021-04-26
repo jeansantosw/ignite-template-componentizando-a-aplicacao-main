@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '../components/Button';
 
+
 import { api } from '../services/api';
 
 
@@ -8,12 +9,12 @@ import { api } from '../services/api';
 
 export function SideBar() {
   // Complete aqui
-  const [selectedGenreId, setSelectedGenreId] = useState(1);
+ // const [selectedGenreId, setSelectedGenreId] = useState(1);
 
-  const [genres, setGenres] = useState<GenreResponseProps[]>([]);
-  const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
+ const [genres, setGenres] = useState<GenreResponseProps[]>([]);
+ // const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
 
-  const [movies, setMovies] = useState<MovieProps[]>([]);
+  //const [movies, setMovies] = useState<MovieProps[]>([]);
 
   useEffect(() => {
     api.get<GenreResponseProps[]>('genres').then(response => {
